@@ -11,10 +11,24 @@
 	</pre>
 	<br>
 	<?php 
-		$username = $_POST['username'];
-		$password = $_POST['password'];
+		// if(isset($_POST["username"])){
+		// 	$username = $_POST['username'];	
+		// } else
+		// 	$username="";
+		// if(isset($_POST["password"]))
+		// 	$password = $_POST['password'];
+		// else
+		// 	$password="";
 
-		echo "{$username}: {$password}";
+		// $username = isset($_POST['username']) ? 
+
+		if(isset($_POST['submit'])){
+			echo 'form was submitted<br>';
+			$username = isset($_POST['username']) ? $_POST['username'] : '';
+			$password = isset($_POST['password']) ? $_POST['password'] : '';
+		}
+
+		echo " {$username}:  {$password}";
 	?>
 </body>
 </html>
